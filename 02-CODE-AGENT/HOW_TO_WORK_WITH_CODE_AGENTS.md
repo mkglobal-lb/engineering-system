@@ -37,6 +37,20 @@ Ask for:
 
 Do not require giant logs when a concise result is enough.
 
+## Session Continuity | استمرارية الـ Sessions
+
+For substantial work that spans sessions:
+
+- treat chat as temporary working context, not durable project state;
+- preserve progress in the project repository through Git plus the existing active handoff/execution plan;
+- prefer a coherent checkpoint before changing sessions;
+- continue the same feature branch while scope remains the same;
+- use a Draft PR when it provides review, CI, cumulative-diff, or collaboration value — not merely because the Agent session changed;
+- make the fresh Agent inspect repository state and baseline verification before editing;
+- keep durable `CURRENT_STATE` documentation separate from session-by-session progress.
+
+See [`LONG_RUNNING_AGENT_WORKFLOW.md`](../01-WORKFLOWS/LONG_RUNNING_AGENT_WORKFLOW.md).
+
 ## Do Not Let the Agent
 
 - invent business rules;

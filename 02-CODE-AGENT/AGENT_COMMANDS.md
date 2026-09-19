@@ -22,6 +22,14 @@ Run real checks that prove the change works.
 Critically inspect a change for correctness and risks.
 **لمراجعة الكود/التغيير.**
 
+## CHECKPOINT
+Preserve a verified, coherent continuation point for unfinished work: update the existing project handoff, record evidence, commit, and push according to project policy.
+**لحفظ نقطة واضحة وقابلة للاستكمال قبل تغيير الـ session بدون الادعاء أن العمل انتهى.**
+
+## RESUME
+Re-establish project state from repository evidence, Git history, the active handoff, and relevant verification before continuing.
+**لبدء session جديدة من حالة المشروع الفعلية، لا من ذاكرة الشات.**
+
 ## AUDIT
 Compare the current system against an explicit standard/source of truth and identify gaps.
 **للتدقيق الشامل مقابل مرجع واضح.**

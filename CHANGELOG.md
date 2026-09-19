@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.2.0 — 2026-09-19
+
+- Added a general long-running Code Agent workflow for safe continuation across sessions/context windows.
+- Defined the separation between AI session lifecycle, Git branch lifecycle, pull-request lifecycle, and feature completion.
+- Established repository-backed handoffs and Git history as durable continuity, with chat treated as temporary context.
+- Added evidence-based checkpoint, Draft PR, fresh-session resume, and source-of-truth rules.
+- Clarified that this playbook is canonical for cross-project engineering process while each project repository remains authoritative for project-specific state.
+- Added CHECKPOINT and RESUME Agent commands and linked the workflow from Start Here, Code Agent guidance, and Git/delivery guidance.
+- Based the workflow on published guidance from Anthropic, OpenAI, and GitHub.
+
 ## v1.1.0 — 2026-09-19
 
 - Added a risk-scaled architecture plan review and execution handoff workflow.

@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.0 — 2026-09-19
+
+- Added a risk-scaled architecture plan review and execution handoff workflow.
+- Defined responsibilities for the owner, Claude Code, ChatGPT, Codex, and verification.
+- Added copy-ready prompts for architecture drafting, independent review, finalization, and phase execution.
+- Added an approved worker-order template, explicit lifecycle states, stop conditions, and plan change control.
+- Clarified that GitHub is the source of truth for approved plans and that project-specific worker orders stay in their project repositories.
+
 ## v1.0.0 — 2026-09-06
 
 Initial release.

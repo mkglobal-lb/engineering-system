@@ -1,4 +1,5 @@
 # Architecture Plan Review & Execution Handoff
+
 ## مراجعة الخطة المعمارية وتسليمها للتنفيذ
 
 Use this workflow when a change needs deliberate architecture or cross-layer planning before implementation.
@@ -395,4 +396,4 @@ Before closing:
 - update an ADR only when a durable consequential decision requires it;
 - close the phase only when the Definition of Done is satisfied.
 
-The final plan stays with Claude Code; the execution evidence stays with the implementation phase, commit, or PR.
+The final approved plan remains in the project repository. Claude Code remains the plan owner, while execution evidence stays with the implementation phase, commit, or PR.

@@ -9,6 +9,7 @@ Choose what you are doing:
 | Fix a bug / أصلّح Bug | [`01-WORKFLOWS/BUG_WORKFLOW.md`](01-WORKFLOWS/BUG_WORKFLOW.md) |
 | Build a feature / أبني Feature | [`01-WORKFLOWS/FEATURE_WORKFLOW.md`](01-WORKFLOWS/FEATURE_WORKFLOW.md) |
 | Review an architecture plan and hand it to Codex | [`01-WORKFLOWS/ARCHITECTURE_PLAN_REVIEW_AND_HANDOFF.md`](01-WORKFLOWS/ARCHITECTURE_PLAN_REVIEW_AND_HANDOFF.md) |
+| Continue substantial work across Code Agent sessions | [`01-WORKFLOWS/LONG_RUNNING_AGENT_WORKFLOW.md`](01-WORKFLOWS/LONG_RUNNING_AGENT_WORKFLOW.md) |
 | Improve UI/UX | [`01-WORKFLOWS/UI_UX_WORKFLOW.md`](01-WORKFLOWS/UI_UX_WORKFLOW.md) |
 | Refactor safely / Refactor بدون تغيير behavior | [`01-WORKFLOWS/REFACTOR_WORKFLOW.md`](01-WORKFLOWS/REFACTOR_WORKFLOW.md) |
 | Change database/schema/data | [`01-WORKFLOWS/DATABASE_MIGRATION_WORKFLOW.md`](01-WORKFLOWS/DATABASE_MIGRATION_WORKFLOW.md) |

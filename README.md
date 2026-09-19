@@ -3,9 +3,13 @@
 
 **Purpose | الهدف**
 
-This repository is a **central personal/professional reference** for how to work as a professional software engineer and how to work with Code Agents across any project.
+This repository is the **canonical cross-project source of truth for engineering working practices**: how to investigate, design, implement, verify, review, deliver, and work with Code Agents professionally across projects.
 
-هذا الـ repository هو **مرجع مركزي شخصي/مهني** لطريقة العمل كمهندس برمجيات محترف، وكيفية التعامل مع Code Agents في أي مشروع.
+هذا الـ repository هو **المصدر المرجعي الأساسي لطريقة العمل الهندسية عبر جميع المشاريع**: كيف نحقق، نخطط، ننفذ، نتحقق، نراجع، نسلّم، ونتعامل مع Code Agents بطريقة مهنية.
+
+It does **not** replace project-specific sources of truth. Each project repository remains authoritative for its own code, schema, tests, configuration, approved business rules, runtime evidence, and durable project documentation.
+
+وهو لا يستبدل مصادر الحقيقة الخاصة بكل مشروع. كل project repo يبقى المرجع لحالته الفعلية وقواعده وبياناته وكوده واختباراته.
 
 It is **not** installed into projects. Projects do not depend on it. You open this playbook when you need guidance, copy the relevant prompt/workflow, and work inside the actual project normally.
 

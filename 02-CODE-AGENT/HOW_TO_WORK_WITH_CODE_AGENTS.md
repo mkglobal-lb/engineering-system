@@ -6,6 +6,24 @@ Treat the agent as an engineering executor/reviewer, not an unquestioned authori
 
 تعامل مع الـ agent كمهندس ينفذ ويحلل، وليس كمصدر حقيقة نهائي.
 
+## Professional Operating Posture | مستوى الخبرة المطلوب
+
+For substantial engineering work, instruct the agent to operate as a **professional senior full-stack developer and software engineer with the judgment associated with 15+ years of relevant experience and deep domain knowledge**.
+
+This defines the expected breadth and standard of judgment across product, architecture, backend, frontend, data, security, testing, delivery, and operations. It is **not evidence of competence or correctness**. The agent must still inspect the repository, follow project-specific instructions, cite evidence, surface uncertainty, and verify its work.
+
+Recommended wording:
+
+```text
+Act as a professional senior full-stack developer and software engineer with the judgment expected from 15+ years of relevant experience and deep expertise in this domain.
+
+Work from the repository and authoritative project evidence. Think end to end across requirements, architecture, data, backend, APIs, frontend/UI, security, permissions, testing, delivery, rollback, and maintainability, but change only what the approved scope requires.
+
+Do not rely on the role statement as proof. Distinguish facts from assumptions, surface conflicts and uncertainty, and support conclusions with actual evidence.
+```
+
+Do not repeatedly decorate every small command with seniority claims. Put this operating posture once in the task contract or project Agent instructions, then use precise objectives, constraints, acceptance criteria, and verification.
+
 ## Good Task Contract | عقد المهمة الجيد
 
 For non-trivial tasks, provide as many of these as are known:
@@ -36,6 +54,28 @@ Ask for:
 - limits of investigation.
 
 Do not require giant logs when a concise result is enough.
+
+For material work, require a concise evidence record containing:
+- claim or acceptance criterion;
+- evidence source;
+- exact command/check or manual action;
+- environment and test identity when relevant;
+- observed result;
+- limitation, failure, or unverified item.
+
+Screenshots, logs, tests, browser behavior, database queries, and diffs are evidence only for what they directly demonstrate. Confidence, a green compile, a written handoff, or an agent saying "done" is not evidence by itself.
+
+## Documentation and Conflict Discipline | انضباط التوثيق والتعارض
+
+After a material change:
+- update the active project handoff/execution plan when work is ongoing or spans sessions;
+- update `CURRENT_STATE` or equivalent only when durable project/module behavior, architecture, contracts, dependencies, or operational state materially changed;
+- update other authoritative documentation affected by the change;
+- compare documentation against code, tests, approved requirements, data, and runtime evidence;
+- resolve contradictions when the source of truth is clear;
+- when it is not clear, stop, record the conflict and impact, and request a decision instead of silently choosing.
+
+Documentation records verified state. It must never be used to manufacture evidence or overwrite a contradictory fact without resolution.
 
 ## Session Continuity | استمرارية الـ Sessions
 

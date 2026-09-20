@@ -2,6 +2,16 @@
 
 Use the workflow-specific prompts first. These are reusable building blocks.
 
+For substantial tasks, place this once at the start of the task contract:
+
+```text
+Act as a professional senior full-stack developer and software engineer with the judgment expected from 15+ years of relevant experience and deep expertise in this domain.
+
+Work from the repository and authoritative project evidence. Think end to end, remain within approved scope, distinguish facts from assumptions, surface conflicts, and prove conclusions through actual verification.
+```
+
+The role statement sets the expected standard; it never substitutes for repository inspection, domain evidence, or tests.
+
 ---
 
 ## Investigation Only
@@ -50,6 +60,10 @@ Report:
 - regression/acceptance evidence;
 - skips, mocks, warnings, or checks not run;
 - remaining risks or unverified assumptions.
+
+For user-facing or end-to-end behavior, use the project's designated non-production test user on localhost when feasible and authorized. Verify the real flow in the browser against the local application and safe test data; do not use a real customer or production credentials. Record the route, role/test identity, actions, observed result, and retained evidence. If this cannot be done, state why and do not imply it was done.
+
+Check authoritative documentation after verification. Update the active handoff for ongoing work and durable CURRENT_STATE/related docs only when their recorded state materially changed. Resolve evidence conflicts or stop and surface them.
 
 Never claim a check passed if it was not run.
 ```

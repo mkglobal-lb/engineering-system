@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.3.0 — 2026-09-20
+
+- Added a reusable professional operating posture for substantial Code Agent work: senior full-stack/software-engineering judgment associated with 15+ years of relevant experience and deep domain expertise.
+- Clarified that role and experience language sets an expectation but never proves correctness.
+- Added evidence records that map material claims and acceptance criteria to current, attributable verification.
+- Added real user-flow verification on localhost with designated non-production test users when relevant, feasible, and authorized.
+- Prohibited using real customers, production credentials, production mutations, or undocumented shared credentials for localhost verification.
+- Required active handoff updates for ongoing multi-session work and durable CURRENT_STATE/documentation updates only when durable state materially changes.
+- Added explicit conflict-resolution and escalation rules across requirements, code, tests, data, runtime evidence, and documentation.
+
 ## v1.2.0 — 2026-09-19
 
 - Added a general long-running Code Agent workflow for safe continuation across sessions/context windows.

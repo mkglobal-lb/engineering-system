@@ -35,7 +35,7 @@ Use the right source for the right question:
 5. **Pull request** — review, discussion, CI, and cumulative-diff surface; not proof that the implementation is correct.
 6. **Agent chat history** — temporary working context only.
 
-If documentation conflicts with code, tests, data, an approved business rule, or production evidence, surface the conflict. Do not silently treat a stale handoff as truth.
+If documentation conflicts with code, tests, data, an approved business rule, or production evidence, identify the authority for that specific question and resolve the contradiction when evidence is sufficient. Update the stale source in the same change when appropriate. If authority or required behavior remains ambiguous, stop, record the competing evidence and impact in the active handoff, and request a decision. Do not silently choose a source or treat a stale handoff as truth.
 
 Project-specific handoffs belong in the project repository, not in this central playbook.
 
@@ -93,7 +93,8 @@ Record only verified information:
 - remaining work;
 - material decisions and why;
 - known risks, blockers, or failures;
-- verification actually run and its result;
+- verification actually run and its result, including localhost test-user evidence when relevant;
+- contradictions found, how they were resolved, or the decision still required;
 - the next concrete step.
 
 Update `CURRENT_STATE` or equivalent durable project documentation only when the durable project/module state changed. Do not use it as a session diary.

@@ -1,86 +1,62 @@
-# Handling Large Prompts with Claude Code
+# Handling Large Task Inputs with Claude Code
 
-## Rule
+## Purpose
 
-**Never paste large prompts directly into the chat session.**
+Use files for large task inputs when that improves navigation, reuse, reviewability, or session continuity.
 
-Instead:
-1. Save the large prompt as a file in your project (e.g., `docs/REQUIREMENTS.md`, `docs/BRIEF.md`)
-2. Reference the file in your session: "Read docs/REQUIREMENTS.md"
-3. Ask Claude to work with the file content
+Do not treat a large prompt file as permanent project documentation merely because it was useful during implementation.
 
-## Why?
+## Practical Rule
 
-### Token Consumption
+- Small instruction: chat is usually fine.
+- Larger requirement/review brief: a repository file is often easier to reference and version.
+- Durable requirement or approved plan: store it in the project's canonical documentation location.
+- Temporary one-off prompt/review input: mark its lifecycle and remove or archive it after its useful content has been integrated.
 
-When you paste a large prompt into the chat:
-- The entire text becomes part of the session context
-- **Every new message pulls the full prompt again** into the model's context window
-- This burns tokens rapidly, even if you only pasted it once
+Exact context/token behavior varies by tool and provider. The engineering reason to prefer a file is maintainability and a stable source that can be re-read from repository state, not a guaranteed token-saving formula.
 
-When you save it as a file and reference it:
-- Claude reads the file once on demand
-- The content is **not repeatedly pulled** with each message
-- Significant token savings, especially for prompts with thousands of words
+## Recommended Workflow
 
-### Context Management
+1. Classify the input:
+   - durable requirement;
+   - approved plan;
+   - temporary working prompt;
+   - investigation/review brief.
+2. Save it only if a file improves the work.
+3. Give it a clear name and location.
+4. Tell the Agent whether the file is authoritative or only supporting input.
+5. Produce the durable output in the correct canonical file/code.
+6. At closure, decide whether the input should:
+   - remain authoritative;
+   - be archived/superseded;
+   - be deleted because it is fully temporary and contains no unique knowledge.
 
-- Chat history accumulates — large pasted content stays in context for the entire session
-- File references keep the session clean and focused
-- You can use `/clear` between tasks without losing the source material
+## Example
 
-## When to Use Files vs. Chat
-
-| Prompt Size | Where to Put It |
-|-------------|-----------------|
-| Small (<500 words) | Chat is fine (one-time paste) |
-| Medium (500-2000 words) | Prefer a file |
-| Large (>2000 words) | **Always use a file** |
-
-## Workflow
-
-```bash
-# 1. Create the file
-docs/REQUIREMENTS.md  # or docs/BRIEF.md, docs/PROMPT.md
-
-# 2. In your Claude Code session
-"Read docs/REQUIREMENTS.md and ask me clarifying questions"
-
-# 3. After clarification
-"Now write a full spec in docs/SPEC.md based on REQUIREMENTS.md"
-
-# 4. Review the spec, then
-"Convert SPEC.md into an implementation plan in docs/PLAN.md"
-
-# 5. Execute tasks from PLAN.md one by one
-# Use /clear between major tasks
+```text
+docs/requirements/FINANCE_RECONCILIATION_REQUIREMENTS.md
+docs/plans/FINANCE_RECONCILIATION_PLAN.md
+docs/work/FINANCE_RECONCILIATION_REVIEW_INPUT.md
 ```
 
-## Example File Structure
+In the Agent session:
 
-```
-project/
-├── docs/
-│   ├── REQUIREMENTS.md    # Your large prompt / brief
-│   ├── SPEC.md            # Claude's spec (after clarification)
-│   └── PLAN.md            # Implementation plan (phases, tasks)
-├── CLAUDE.md              # Permanent project rules
-└── src/
+```text
+Read docs/requirements/FINANCE_RECONCILIATION_REQUIREMENTS.md as the approved requirement.
+Read docs/work/FINANCE_RECONCILIATION_REVIEW_INPUT.md as supporting review input only.
+Do not treat the review input as a source of truth when it conflicts with the approved requirement or actual repository evidence.
 ```
 
-## Common Mistakes
+After the work is complete, the temporary review input should not remain indefinitely unless it still provides unique historical value.
 
-❌ **Pasting 5000+ words directly in chat**
-   - Burns tokens on every message
-   - Makes session hard to navigate
-   - Context becomes bloated
+## Avoid
 
-✅ **Saving as `docs/REQUIREMENTS.md` and referencing it**
-   - One-time read by Claude
-   - Clean session context
-   - Easy to update without re-pasting
+- pasting very large repeated instructions into every message;
+- keeping multiple "final", "final2", or duplicate prompt files;
+- leaving temporary prompts beside durable requirements with no status distinction;
+- converting AI-generated text into project truth without verification;
+- deleting old files based only on age.
 
----
-
-**Last Updated**: 2026-09-19
-**Source**: Professional Claude Code Workflow Best Practices
+See:
+- [`DOCUMENTATION_STANDARDS.md`](../04-ENGINEERING/DOCUMENTATION_STANDARDS.md)
+- [`INVESTIGATION_AND_DOCUMENTATION_AUDIT.md`](../01-WORKFLOWS/INVESTIGATION_AND_DOCUMENTATION_AUDIT.md)

@@ -14,6 +14,16 @@ The role statement sets the expected standard; it never substitutes for reposito
 
 ---
 
+## Pre-Code Repository Investigation + Documentation Audit
+
+For substantial, risky, cross-cutting, or documentation-sensitive work, use the dedicated copy-ready prompt:
+
+[`INVESTIGATION_PROMPT.md`](INVESTIGATION_PROMPT.md)
+
+It requires evidence-based discovery without forcing a repository-wide Markdown read for every task, and it prevents unsafe automatic deletion or silent business-rule decisions.
+
+---
+
 ## Investigation Only
 
 ```text

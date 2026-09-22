@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.4.0 — 2026-09-22
+
+- Added a risk-scaled pre-code repository investigation and documentation-audit workflow.
+- Added a copy-ready Code Agent investigation prompt for substantial/risky work.
+- Added cross-project documentation standards covering authority, lifecycle, CURRENT_STATE, handoffs, temporary prompts, consolidation, archival, and deletion.
+- Explicitly rejected age-based document deletion and repository-wide Markdown reading as mandatory defaults.
+- Clarified that documentation fixes must not silently decide business rules, finance semantics, security boundaries, API contracts, migrations, or architecture ownership.
+- Clarified that CURRENT_STATE and HANDOFF artifacts are updated/created only when their durable purpose is justified, not automatically for every session.
+- Clarified the lifecycle of large Claude/task input files and distinguished temporary working prompts from authoritative project documentation.
+- Linked the new workflow and prompt from Start Here and the Prompt Library.
+
 ## v1.3.0 — 2026-09-20
 
 - Added a reusable professional operating posture for substantial Code Agent work: senior full-stack/software-engineering judgment associated with 15+ years of relevant experience and deep domain expertise.

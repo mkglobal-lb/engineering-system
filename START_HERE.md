@@ -8,6 +8,8 @@ Choose what you are doing:
 |---|---|
 | Fix a bug / أصلّح Bug | [`01-WORKFLOWS/BUG_WORKFLOW.md`](01-WORKFLOWS/BUG_WORKFLOW.md) |
 | Build a feature / أبني Feature | [`01-WORKFLOWS/FEATURE_WORKFLOW.md`](01-WORKFLOWS/FEATURE_WORKFLOW.md) |
+| Investigate a repository + audit relevant documentation before coding | [`01-WORKFLOWS/INVESTIGATION_AND_DOCUMENTATION_AUDIT.md`](01-WORKFLOWS/INVESTIGATION_AND_DOCUMENTATION_AUDIT.md) |
+| Use the copy-ready pre-code investigation prompt | [`02-CODE-AGENT/INVESTIGATION_PROMPT.md`](02-CODE-AGENT/INVESTIGATION_PROMPT.md) |
 | Review an architecture plan and hand it to Codex | [`01-WORKFLOWS/ARCHITECTURE_PLAN_REVIEW_AND_HANDOFF.md`](01-WORKFLOWS/ARCHITECTURE_PLAN_REVIEW_AND_HANDOFF.md) |
 | Continue substantial work across Code Agent sessions | [`01-WORKFLOWS/LONG_RUNNING_AGENT_WORKFLOW.md`](01-WORKFLOWS/LONG_RUNNING_AGENT_WORKFLOW.md) |
 | Improve UI/UX | [`01-WORKFLOWS/UI_UX_WORKFLOW.md`](01-WORKFLOWS/UI_UX_WORKFLOW.md) |
@@ -22,6 +24,7 @@ Choose what you are doing:
 | Review a change | [`03-VERIFICATION/CODE_REVIEW.md`](03-VERIFICATION/CODE_REVIEW.md) |
 | Decide whether work is truly done | [`03-VERIFICATION/DEFINITION_OF_DONE.md`](03-VERIFICATION/DEFINITION_OF_DONE.md) |
 | Review engineering principles | [`04-ENGINEERING/ENGINEERING_PRINCIPLES.md`](04-ENGINEERING/ENGINEERING_PRINCIPLES.md) |
+| Apply documentation standards | [`04-ENGINEERING/DOCUMENTATION_STANDARDS.md`](04-ENGINEERING/DOCUMENTATION_STANDARDS.md) |
 | Understand architecture/design | [`04-ENGINEERING/ARCHITECTURE_AND_DESIGN.md`](04-ENGINEERING/ARCHITECTURE_AND_DESIGN.md) |
 | Review security/data principles | [`04-ENGINEERING/SECURITY_AND_DATA.md`](04-ENGINEERING/SECURITY_AND_DATA.md) |
 | Review Git/delivery habits | [`04-ENGINEERING/GIT_AND_DELIVERY.md`](04-ENGINEERING/GIT_AND_DELIVERY.md) |
